@@ -6,30 +6,13 @@
 /*   By: sdeppe <sdeppe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/12 03:54:50 by sdeppe            #+#    #+#             */
-/*   Updated: 2025/08/18 22:19:16 by sdeppe           ###   ########.fr       */
+/*   Updated: 2025/08/19 16:09:26 by sdeppe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-long int	pers_pow(int b, int p)
-{
-	int			i;
-	long int	value;
-
-	i = 1;
-	value = 1;
-	if(p == 0)
-		return (1);
-	while (i <= p)
-	{	
-		value = value * b;
-		i++;
-	}
-	return (value);
-}
-
-int base_to_int(char *base, int *valide)
+int base_to_int(char *base)
 {
 	int i;
 	int checki;
@@ -75,30 +58,30 @@ void	write_nbr(int num, int *index, char *base)
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int			index;
-	long int	tmp;
-	int			valide;
-
-	index = 100 / base_to_int(base, &valide);
-	tmp = nbr;
-	if (tmp < 0)
+	check_valide_base();
+	if (nbr == -2147483648)
+	{
+		write (1, "-2147483648", 11);
+		return ;
+	}
+	if (nbr < 0)
 	{
 		write(1, "-", 1);
-		tmp = tmp * -1;
-		index++;
+		ft_putnbr(-nb);
 	}
-	if (valide == -1)
-		return;
-	while (index > 0)
+	else if (nbr >= 10)
+	{	
+		ft_putnbr_base(nb / 10);
+		ft_putchar(nb % 10 + 48);
+	}
+	else
 	{
-		if (tmp / pers_pow(base_to_int(base, &valide), index - 1) != 0)
-			write_nbr(tmp, &index, base);
-		index--;
+		ft_putchar(nb + 48);
 	}
 }
 
 int main()
 {
 	int valide;
-	ft_putnbr_base(11899, "0123456789hihhi");
+	ft_putnbr_base(11899, "0123456789");
 }

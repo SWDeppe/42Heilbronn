@@ -6,7 +6,7 @@
 /*   By: sdeppe <sdeppe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 10:47:42 by sdeppe            #+#    #+#             */
-/*   Updated: 2025/08/14 11:16:47 by sdeppe           ###   ########.fr       */
+/*   Updated: 2025/08/19 20:39:40 by sdeppe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@ int	ft_recursive_power(int nb, int power)
 	int	value;
 
 	value = nb;
-	if(power == 0)
+	if (power == 0)
 		return (1);
-	else if(power < 0)
+	else if (power < 0)
 		return (0);
 	if (power > 1)
 	{

@@ -6,24 +6,23 @@
 /*   By: sdeppe <sdeppe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 13:22:59 by sdeppe            #+#    #+#             */
-/*   Updated: 2025/08/14 14:23:04 by sdeppe           ###   ########.fr       */
+/*   Updated: 2025/08/19 20:52:36 by sdeppe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_is_prime(int nb)
+int	ft_is_prime(int nb)
 {
-	int i;
+	int	i;
 
 	i = nb - 1;
-	if(nb < 2)
+	if (nb < 2)
 		return (0);
 	if (nb == i)
-		i++; 
+		i++;
 	while (i > 1)
 	{
 		if (nb % i == 0)
 			return (0);
-		
 		i--;
 	}
 	return (1);

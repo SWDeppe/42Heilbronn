@@ -6,17 +6,17 @@
 /*   By: sdeppe <sdeppe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/16 04:52:18 by sdeppe            #+#    #+#             */
-/*   Updated: 2025/08/16 04:55:47 by sdeppe           ###   ########.fr       */
+/*   Updated: 2025/08/20 14:57:18 by sdeppe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINTS_H
-# define FT_POINTS_H
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
 typedef struct s_point
 {
-	int x;
-	int y;
+	int	x;
+	int	y;
 }t_point;
 
 #endif

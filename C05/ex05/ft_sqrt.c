@@ -6,18 +6,18 @@
 /*   By: sdeppe <sdeppe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 12:17:02 by sdeppe            #+#    #+#             */
-/*   Updated: 2025/08/14 13:22:52 by sdeppe           ###   ########.fr       */
+/*   Updated: 2025/08/19 20:50:34 by sdeppe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int index;
+	int	index;
 
 	index = 1;
 	if (nb <= 0)
-	 return (0);
-	while(index <= nb)
+		return (0);
+	while (index <= nb)
 	{
 		if (index * index == nb)
 			return (index);

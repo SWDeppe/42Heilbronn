@@ -6,7 +6,7 @@
 /*   By: sdeppe <sdeppe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 23:55:05 by sdeppe            #+#    #+#             */
-/*   Updated: 2025/08/15 21:53:29 by sdeppe           ###   ########.fr       */
+/*   Updated: 2025/08/19 17:29:42 by sdeppe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	write_str_arr(int size, char **strs, char *sep, char *out)
 	int	r;
 
 	i = 0;
-	y = 0;
 	r = 0;
 	while (i < size)
 	{

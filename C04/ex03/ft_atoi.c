@@ -6,7 +6,7 @@
 /*   By: sdeppe <sdeppe@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 16:54:47 by sdeppe            #+#    #+#             */
-/*   Updated: 2025/08/18 22:11:19 by sdeppe           ###   ########.fr       */
+/*   Updated: 2025/08/19 16:05:06 by sdeppe           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	ft_atoi(char *str)
 	int	value;
 
 	i = 0;
-	while (*(str + i) == ' ')
+	while (*(str + i) == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
 	neg = is_negative(str, &i);
 	while (*(str + i) == '0')
